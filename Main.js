@@ -59,7 +59,7 @@ export default class Main extends Component{
 								<Text style = {{color: '#fff',fontSize: 18,}}>
                                 ->
                                 </Text>
-						</TouchableOpacity>
+				</TouchableOpacity>
 				
 				 </View>
 				);
@@ -137,28 +137,28 @@ export default class Main extends Component{
                 <Text style = {{color: 'white'}}>New Task</Text>
              </TouchableOpacity>
 
-						<ScrollView style = {styles.scrollContainer}>
+		<ScrollView style = {styles.scrollContainer}>
            	{
-							 this.state.Array.length > 0 ?
-							 <View>
-								 {
-									 this.state.Array.map((a,i) => 
-									 {
-										 return (
-											 <View key={i} style={{backgroundColor: '#ffe57f', marginBottom: 3 ,}}>
-											 <Text key={i} style = {{fontSize: 20, fontWeight: '600',color: '#d66204' }}> {a.todoTitle} </Text>  
-											 <Text key={i} style = {{fontSize: 18}}> {'> '+ a.tasks[0] + '\n ' + '> '+ a.tasks[1] + '\n'} </Text> 
-											 <TouchableOpacity key = {i} onPress = {this.deletefunc.bind(this, i)} style = {styles.noteDelete} >
-            					  <Text style = {styles.noteDeleteText}>X</Text>
-           						 </TouchableOpacity>
-											 </View>
+			 this.state.Array.length > 0 ?
+				<View>
+		{
+		 this.state.Array.map((a,i) => 
+			{
+				return (
+				<View key={i} style={{backgroundColor: '#ffe57f', marginBottom: 3 ,}}>
+				<Text key={i} style = {{fontSize: 20, fontWeight: '600',color: '#d66204' }}> {a.todoTitle} </Text>  
+				<Text key={i} style = {{fontSize: 18}}> {'> '+ a.tasks[0] + '\n ' + '> '+ a.tasks[1] + '\n'} </Text> 
+				<TouchableOpacity key = {i} onPress = {this.deletefunc.bind(this, i)} style = {styles.noteDelete} >
+            			<Text style = {styles.noteDeleteText}>X</Text>
+           			</TouchableOpacity>
+				</View>
 								 
-										 );
-									 })
-								 }
-							 </View>
-							 :null
-							 }
+				 );
+			 })
+		}
+	</View>
+	:null
+	}
             </ScrollView>
 
             </View>
@@ -193,8 +193,8 @@ export default class Main extends Component{
                             modalVisible: false,
                             myArr: [],
                             titleText: '',
-														strText: '',
-														lis: []
+		            strText: '',
+			    lis: []
                          })
          
 				}
